@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-read TPdevice <<< $( xinput | sed -nre '/Alps/s/.*id=([0-9]*).*/\1/p' )
+# works for some laptops
+#
+# read TPdevice <<< $( xinput | sed -nre '/Alps/s/.*id=([0-9]*).*/\1/p' )
+#
+read TPdevice <<< $( xinput | sed -nre '/ELAN/s/.*id=([0-9]*).*/\1/p' )
 state=$( xinput list-props "$TPdevice" | grep "Device Enabled" | grep -o "[01]$" )
 
 if [ "$state" -eq '1' ];then
