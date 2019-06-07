@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+$IDF_PATH/tools/idf.py $@
