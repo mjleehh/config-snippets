@@ -2,6 +2,10 @@
 if [ -d "$HOME/esp32" ] ; then
    ESP_HOME="$HOME/esp32"
    
+   if [ -d "$ESP_HOME/esp-iot-solution" ] ; then
+      export IOT_SOLUTION_PATH="$ESP_HOME/esp-iot-solution"
+   fi
+
    if [ -d "$ESP_HOME/esp-idf" ] ; then
        export IDF_PATH="$HOME/esp32/esp-idf"
    fi
@@ -21,3 +25,5 @@ if [ -d "$HOME/esp32" ] ; then
        export OPENOCD_SCRIPTS="$ESP_HOME/openocd-esp32/share/openocd/scripts"
    fi
 fi
+
+   

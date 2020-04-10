@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+openocd -f interface/jlink.cfg -f board/esp32-solo-1.cfg  -c "init; reset halt; set ESP32_RTOS none"
